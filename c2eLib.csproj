@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Build">
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    
+  </PropertyGroup>  
+    
+  <PropertyGroup Label="Package">
+    
+    <PackageId>c2eLib</PackageId>
+    <PackageVersion>0.0.1</PackageVersion>
+    <PackageReleaseNotes>Caos Injector for Windows working</PackageReleaseNotes>
+    <PackageTags>c2e Caos Creatures Docking Station </PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+
+    <Authors>Taranais</Authors>
+    <Description>.Net Standard library for c2e engine, Caos Injector for Windows (MemoryMappedFiles) and Unix (Sockets) </Description>
+    <Copyright>Copyright © Taranais. All rights reserved.</Copyright>
+    
+    
+    <PackageIconUrl></PackageIconUrl>
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>  
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+  </PropertyGroup>  
+
+  <ItemGroup Label="Package References">
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.2" />
+  </ItemGroup>
+</Project>
