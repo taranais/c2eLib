@@ -20,7 +20,7 @@
     <PackageLicenseUrl>
     </PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
     <IncludeSource>True</IncludeSource>
   </PropertyGroup>
