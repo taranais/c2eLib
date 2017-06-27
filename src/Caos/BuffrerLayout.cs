@@ -100,14 +100,14 @@ namespace c2eLib.Caos
                 Data[i] = MemViewAccessor.ReadByte(24 + i);
             }
         }
-
         /// <summary>
         /// get control string
         /// </summary>
         /// <returns></returns>
         private static string stringCode(){
             string tagCode = "c2e@";
-            return stringToASCII(tagCode);
+            // return stringToASCII(tagCode);
+            return c2eLib.Utils.utf16ToLatin1(tagCode);
         }
 
         /// <summary>
@@ -119,6 +119,7 @@ namespace c2eLib.Caos
             byte[] utf = System.Text.Encoding.ASCII.GetBytes(code);
             return System.Text.Encoding.ASCII.GetString(utf);
         }
+
 
         /// <summary>
         /// Get CaosResult from readed data

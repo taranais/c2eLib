@@ -1,32 +1,32 @@
 *.swp
 *.*~
-project.lock.json
+src/project.lock.json
 .DS_Store
 *.pyc
 
 # Visual Studio Code
-.vscode
+*.vscode
 
 # User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+src/*.suo
+src/*.user
+src/*.userosscache
+src/*.sln.docstates
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
-msbuild.log
-msbuild.err
-msbuild.wrn
+src/[Dd]ebug/
+src/[Dd]ebugPublic/
+src/[Rr]elease/
+src/[Rr]eleases/
+src/x64/
+src/x86/
+src/build/
+src/bld/
+src/[Bb]in/
+src/[Oo]bj/
+src/msbuild.log
+src/msbuild.err
+src/msbuild.wrn
 
 # Visual Studio 2015
-.vs/
+src/.vs/
