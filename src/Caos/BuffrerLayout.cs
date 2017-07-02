@@ -106,20 +106,8 @@ namespace c2eLib.Caos
         /// <returns></returns>
         private static string stringCode(){
             string tagCode = "c2e@";
-            // return stringToASCII(tagCode);
-            return c2eLib.Utils.utf16ToLatin1(tagCode);
+            return c2eLib.Utils.utf16ToAscii(tagCode);
         }
-
-        /// <summary>
-        /// Converts to ASCII
-        /// </summary>
-        /// <param name="code"></param>
-        /// <returns></returns>
-        private static string stringToASCII(string code){
-            byte[] utf = System.Text.Encoding.ASCII.GetBytes(code);
-            return System.Text.Encoding.ASCII.GetString(utf);
-        }
-
 
         /// <summary>
         /// Get CaosResult from readed data

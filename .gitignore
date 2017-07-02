@@ -1,6 +1,7 @@
 *.swp
 *.*~
 src/project.lock.json
+tests/project.lock.json
 .DS_Store
 *.pyc
 
@@ -30,3 +31,29 @@ src/msbuild.wrn
 
 # Visual Studio 2015
 src/.vs/
+
+# tests
+
+# User-specific files
+tests/*.suo
+tests/*.user
+tests/*.userosscache
+tests/*.sln.docstates
+
+# Build results
+tests/[Dd]ebug/
+tests/[Dd]ebugPublic/
+tests/[Rr]elease/
+tests/[Rr]eleases/
+tests/x64/
+tests/x86/
+tests/build/
+tests/bld/
+tests/[Bb]in/
+#tests/[Oo]bj/
+tests/msbuild.log
+tests/msbuild.err
+tests/msbuild.wrn
+
+# Visual Studio 2015
+tests/.vs/

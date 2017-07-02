@@ -5,8 +5,8 @@ namespace c2eLib
 {
     public static class Utils{
 
-        public static string utf16ToLatin1(string str){
-            Encoding iso = Encoding.GetEncoding("ISO-8859-1");
+        public static string utf16ToAscii(string str){
+            Encoding iso = Encoding.ASCII;//.GetEncoding("ISO-8859-1");
             Encoding utf = Encoding.Unicode;
             byte[] utfBytes = utf.GetBytes(str);
             byte[] isoBytes = Encoding.Convert(utf, iso, utfBytes);
@@ -14,8 +14,8 @@ namespace c2eLib
             return msg;            
         }
 
-        public static string latin1ToUtf16(string str){
-            Encoding iso = Encoding.GetEncoding("ISO-8859-1");
+        public static string asciiToUtf16(string str){
+            Encoding iso = Encoding.ASCII;//.GetEncoding("ISO-8859-1");
             Encoding utf = Encoding.Unicode;
             byte[] isoBytes = iso.GetBytes(str);
             byte[] utfBytes = Encoding.Convert( iso, utf, isoBytes);
