@@ -50,7 +50,7 @@ tests/x86/
 tests/build/
 tests/bld/
 tests/[Bb]in/
-#tests/[Oo]bj/
+tests/[Oo]bj/
 tests/msbuild.log
 tests/msbuild.err
 tests/msbuild.wrn
