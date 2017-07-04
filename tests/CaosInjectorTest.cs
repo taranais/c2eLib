@@ -44,20 +44,18 @@ namespace test
         [Fact]
         public void SendCaos_Test()
         {
-            Encoding iso =  Encoding.ASCII;// GetEncoding("ISO-8859-1");
-            Encoding utf = Encoding.Unicode;
             string value ="99";
-            byte[] utfBytes = utf.GetBytes(value);
-            byte[] isoBytes = Encoding.Convert(utf, iso, utfBytes);
-            string msgIso = iso.GetString(isoBytes);
+            byte[] utfBytes = Encoding.Unicode.GetBytes(value);
+            byte[] isoBytes = Encoding.Convert(Encoding.Unicode, Encoding.ASCII, utfBytes);
+            string msgIso = Encoding.ASCII.GetString(isoBytes);
 
             var injector = CaosInjector();
             injector.Init("Docking Station");
             
             var resultado = injector.SendCaos("outv 99","execute");
-            string caosString = iso.GetString(resultado.Content);
-            string caosTrimed = caosString.Trim('\0');
-            Assert.Equal(msgIso, caosTrimed );
+            string caosString = resultado.ContentAsString();
+
+            Assert.Equal(msgIso, caosString );
             
             injector.Stop();
         }

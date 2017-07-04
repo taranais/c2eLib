@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Text;
 
 namespace c2eLib.Caos
 {
@@ -17,6 +19,17 @@ namespace c2eLib.Caos
             Failed      = Convert.ToBoolean(failed);
             Content     = content;
             ProcessID   = processID;
+        }
+         public string ContentAsString(){
+            StringBuilder sb = new StringBuilder();
+            using(StreamReader rdr =  new StreamReader(new MemoryStream(Content), Encoding.ASCII)){
+                Int32 nc;
+                while((nc = rdr.Read()) != -1) {
+                    Char c = (Char)nc;
+                    if( c != '\0' ) sb.Append( c );
+                }
+            }
+            return sb.ToString();
         }
     }
 }
